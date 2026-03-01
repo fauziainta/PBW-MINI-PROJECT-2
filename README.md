@@ -1,4 +1,4 @@
-# PBW-MINI-PROJECT-2
+# PBW-MINI-PROJECT-1
 ## Fauzia Inanta Aurelia/ 2409116044/ Sistem Informasi (B)
 
 # Tampilan Section/Fitur
