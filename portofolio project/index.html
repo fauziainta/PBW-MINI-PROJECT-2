@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Henny+Penny&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio - Fauzia</title>
+
+  
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">{{ navbarName }}</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiences">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <section id="home" class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <h1 class="hero-title">Hi, I'm Fauzia</h1>
+            
+            <p class="hero-subtitle">{{ role }}</p>
+            <p class="hero-desc">
+              {{ heroDescription }}
+            </p>
+            <a href="#about" class="btn btn-light custom-btn mt-3">More about me!</a>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="images/Profile Image.png" alt="Profile" class="img-fluid hero-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">About Me</h2>
+
+        <div class="row">
+          
+          <div class="col-lg-6 mb-4">
+            <div class="about-card">
+              <h4 class="mb-3">Who Am I?</h4>
+              <p>
+                {{ about }}
+              </p>
+
+              <h5 class="mt-4">Education</h5>
+              <ul>
+                <li v-for="exp in education" :key="exp">
+                  {{ exp }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-6">
+  <div class="about-card">
+    <h4 class="mb-4">My Skills</h4>
+
+    <div v-for="skill in skills" :key="skill.name" class="mb-4">
+      <span class="fw-semibold">{{ skill.name }}</span>
+      <div class="skill-bar-container mt-2">
+  <div
+    class="skill-bar d-flex align-items-center justify-content-end pe-2 text-white fw-semibold"
+    :style="{ width: skill.level + '%' }"
+  >  {{ skill.level }}%
+
+  </div>
+</div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+    
+    <section id="experiences" class="py-5 experiences-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Experiences</h2>
+    <div class="row g-4">
+      <div
+        class="col-md-4"
+        v-for="exp in experiences"
+        :key="exp.title"
+      >
+        <div class="card experience-card h-100 shadow-sm">
+          <img
+            :src="exp.image"
+            class="card-img-top"
+            alt="Experience Image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ exp.title }}</h5>
+            <p class="card-text">{{ exp.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="contact-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title mb-4">Let's Work Together!</h2>
+        <p class="mb-4">Feel free to reach out via social media or email.</p>
+
+        <div class="social-icons mb-4">
+          <a href="#" class="social-icon">Instagram</a>
+          <a href="#" class="social-icon">Facebook</a>
+          <a href="#" class="social-icon">TikTok</a>
+          <a href="#" class="social-icon">Twitter</a>
+        </div>
+
+        <p class="contact-info">{{ email }}</p>
+        <a href="#" class="btn btn-light custom-btn">Book & Chat</a>
+      </div>
+    </section>
+
+    <footer class="text-center py-3 footer">
+      <small>© 2026 {{ name }}. All Rights Reserved.</small>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          name: "Fauzia",
+          navbarName: "Fauzia's Portofolio",
+          homeTitle: "Hi, I'm Fauzia! ❀",
+          
+          role: "Fashion Enthusiast & Content Creator",
+          heroDescription:
+            "I am an undergraduate student with a passion for editing and a deep interest in fashion and beauty. I am currently learning web development and creating fashion related video content to expand my skills. I enjoy exploring new ideas and working on small projects that help me grow both creatively and technically.",
+          heroImage:
+            "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+
+          about:
+            "I have a strong interest in the digital creative field, especially in videography and photography. I am comfortable working both in teams and independently to produce high quality and communicative visual content.",
+
+          education: [
+            "SMAN 3 Samarinda (2020 - 2023)",
+            "Mulawarman University (2024 - Sekarang)",
+          ],
+
+          skills: [
+            { name: "Photography", level: 90 },
+            { name: "Video Editing", level: 80 },
+            { name: "Digital Content Creation", level: 75 },
+            { name: "Outfit Styling", level: 85 },
+          ],
+
+          experiences: [
+            {
+              title: "Makeup Artist Asistant",
+              desc: "Assisting professional makeup artists in preparing tools, organizing products, and supporting makeup application for clients and events.", 
+              image: "images/mua.jpg"
+            },
+            {
+              title: "Freelance Photographer",
+              desc: "Providing photography services for events, portraits, and product shoots with a focus on composition, lighting, and storytelling.",
+              image: "images/photographer.jpg"
+            },
+            {
+              title: "Styling and Fashion Content Creation",
+              desc: "Creating fashion styling concepts and producing engaging visual content for social media and digital platforms.",
+              image: "images/fashion.jpg"
+            }
+          ],
+
+          email: "fauzia.college@gmail.com"
+        };
+      }
+    }).mount("#app");
+  </script>
+</body>
+</html>
