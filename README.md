@@ -108,7 +108,7 @@ Menampilkan sosial media dan email:
 ## 6. Vue JS (Data Dinamis)
 Vue digunakan untuk menampilkan data secara dinamis menggunakan interpolation `{{ }}` dan directive `v-for`.
 
-## 7 Penjelasan Styling (CSS)
+## 7. Penjelasan Styling (CSS)
 Hero Title Font
 
     • .hero-title {
