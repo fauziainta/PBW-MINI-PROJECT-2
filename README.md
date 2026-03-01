@@ -42,7 +42,7 @@ Menampilkan pengalaman dalam bentuk card grid:
 
 ## 5. Contact Section
 
-  ・ Menampilkan sosial media dan email:
+Menampilkan sosial media dan email:
 
 <img width="1898" height="440" alt="image" src="https://github.com/user-attachments/assets/4373da0b-ffaa-4d3f-b0b7-ef87185eeecf" />
 
