@@ -1,7 +1,7 @@
 # PBW-MINI-PROJECT-1
 ## Fauzia Inanta Aurelia/ 2409116044/ Sistem Informasi (B)
 
-# Tampilan Section/Fitur
+# A. Tampilan Section/Fitur
 ## 1. Navbar
 Menampilkan navigasi utama untuk berpindah ke setiap section: Home, About Me, Experience, dan     Contact.
 
@@ -46,7 +46,7 @@ Menampilkan pengalaman dalam bentuk card grid:
 
 <img width="1898" height="440" alt="image" src="https://github.com/user-attachments/assets/4373da0b-ffaa-4d3f-b0b7-ef87185eeecf" />
 
-# Penjelasan Kode
+# B. Penjelasan Kode
 ## 1. Navbar
 Menggunakan Bootstrap Navbar untuk navigasi responsif.
 
@@ -133,7 +133,7 @@ Experience Card Image
         }
 Agar ukuran gambar pada semua card sama dan rapi.
 
-# Teknologi yang Digunakan
+# C. Teknologi yang Digunakan
 
 1. `HTML5`
 2. `CSS3`
@@ -141,7 +141,7 @@ Agar ukuran gambar pada semua card sama dan rapi.
 4. `Vue JS (CDN)`
 5. `Google Fonts`
 
-# Fitur Utama
+# D. Fitur Utama
 
 1. `Responsive Design (Bootstrap Grid System)`
 2. `Dynamic Data Rendering (Vue JS)`
